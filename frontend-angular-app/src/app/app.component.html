@@ -1,0 +1,27 @@
+
+<div class="p-4">
+    <h1>Angular 19 + Keycloak (with OneLogin IdP)</h1>
+    <!--   <button (click)="getAccessToken()">Get Access Token</button>
+       <button (click)="logout()">Logout</button>-->
+
+    <!--  <pre *ngIf="token">{{ token }}</pre>-->
+</div>
+
+<div>
+    @if (!token) {
+        <input #username placeholder="Enter username" />
+        <button (click)="loginWithIdp(username.value)">Login one login</button>
+        <button (click)="login(username.value)">Login</button>
+    } @else {
+
+        <button (click)="getDataFromResourceServer()">Get API response</button>
+        <button (click)="logout()">logout</button>
+        <div>The response is : {{responseData}}</div>
+    }
+
+</div>
+
+<div class="p-4">
+
+    <app-create-user></app-create-user>
+</div>

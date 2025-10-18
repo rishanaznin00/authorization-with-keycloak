@@ -1,17 +1,10 @@
-package com.example.demo;
+package com.example.demo.controllers;
 
-import jakarta.servlet.ServletException;
-import jakarta.servlet.http.HttpServletRequest;
-import jakarta.servlet.http.HttpServletResponse;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.servlet.view.RedirectView;
 
 @Controller
 public class LogoutController {
-
+/*
     @GetMapping("/logout-success")
     @ResponseBody
     public String logoutPage() {
@@ -26,5 +19,5 @@ public class LogoutController {
                 + "?redirect_uri=http://localhost:8083/logout-success"; // adjust redirect
 
         return new RedirectView(keycloakLogoutUrl);
-    }
+    }*/
 }

@@ -2,14 +2,7 @@ import { bootstrapApplication } from '@angular/platform-browser';
 import { provideHttpClient } from '@angular/common/http';
 import { AppComponent } from './app/app.component';
 import { KeycloakService } from './app/keycloak.service';
+import {appConfig} from "./app/app.config";
 
-const keycloakService = new KeycloakService();
 
-keycloakService.init().then(() => {
-  bootstrapApplication(AppComponent, {
-    providers: [
-      provideHttpClient(),
-      { provide: KeycloakService, useValue: keycloakService }
-    ]
-  }).catch(err => console.error(err));
-});
+bootstrapApplication(AppComponent, appConfig).catch(err => console.error(err));
